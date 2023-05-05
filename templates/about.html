@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{% block content%}
+<div class="parent">
+    {% if kata %}
+        {%for i in kata %}
+            <div class="first">
+            <img src="{{ i.img }}" alt="pic">
+            <h3>{{i.title}}</h3>
+            <p> {{i.t1}}</p>
+            {{i.t2}}
+            </div>
+        {% endfor %}       
+    {% endif %}
+</div>
+  
+{% endblock %}

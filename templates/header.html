@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="{%static '/css/style.css'%}">
+</head>
+<style>
+    .top{
+        background: linear-gradient( rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url({%static '/Images/bg.jpg' %}); 
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+<body>
+    {% for i in data %}
+    <div class="top" >
+        <div class="navbar">
+    
+            <a href="/" class="logo"><img src="{%static '/Images/v.png' %}" alt="" width="100px" height="70px"></a>
+            <ul>
+                <li><a href="/">{{i.n1}}</a></li>
+                <li><a href="/about/">{{i.n2}}</a></li>
+                <li><a href="/services/">{{i.n3}}</a></li>
+                <li><a href="/contact/">{{i.n4}}</a></li>
+            </ul>
+    
+        </div>
+    {% endfor %}

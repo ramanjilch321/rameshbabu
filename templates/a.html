@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<style>
+    .top{
+        background: linear-gradient( rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(static/Images/bg.jpg); 
+        background-size: cover;
+    background-position: center;
+    }
+</style>
+<body>
+    {% for i in data %}
+    <div class="top">
+        <div class="navbar">
+    
+            <a href="#" class="logo"><img src="{{i.img}}" alt="" width="100px" height="70px"></a>
+            <ul>
+                <li><a href="#">{{i.n1}}</a></li>
+                <li><a href="/about/">{{i.n2}}</a></li>
+                <li><a href="/services/">{{i.n3}}</a></li>
+                <li><a href="/contact/">{{i.n4}}</a></li>
+            </ul>
+    
+        </div>
+        <div class="content">
+            <h1>{{i.contenth1}}</h1>
+            <p>{{i.contentp1}} <br> {{i.contentp2}}
+            </p>
+            <div>
+                <button><span></span> {{i.button1}}</button>
+                <button><span></span> {{i.button2}}</button>
+            </div>
+    
+        </div>
+        {% endfor %}
+    
+    </div>
+
+    
+   
+    <section class="footer">
+
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">Home</a>
+                <a href="#">about</a>
+                <a href="#">products</a>
+            </div>
+            <div class="box">
+                <h3>More links</h3>
+                <a href="#">My account</a>
+                <a href="#">my order</a>
+                <a href="#">my favourite</a>
+            </div>
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="#">Andhrapradesh</a>
+                <a href="#">Telangana</a>
+                <a href="#">Bangalore</a>
+            </div>
+            
+            <div class="box">
+                {% if pata %}
+                {% for j in pata %}
+                <h3>Contact info</h3>
+                <a href="#">{{j.mobile_number}}</a>
+                <a href="#">test@gmai.com</a>
+                <a href="#">Hyderabad -Telangana</a>
+                {%endfor%}
+                {%endif%}
+                
+            </div>
+            
+    
+            <div class="credit">created by xyz | all right reserved</div>
+        </div>
+    
+    </section>
+    
+    
+    
+    
+    </body>
+    </html>

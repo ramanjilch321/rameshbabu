@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for i in data %}
+        <div class="content">
+            <h1>{{i.contenth1}}</h1>
+            <p>{{i.contentp1}} <br> {{i.contentp2}}
+            </p>
+            <div>
+                <button><span></span> {{i.button1}}</button>
+                <button><span></span> {{i.button2}}</button>
+            </div>
+    
+        </div>
+        {% endfor %}
+    
+    </div>
+{% endblock %}
+    
+   
+ 
